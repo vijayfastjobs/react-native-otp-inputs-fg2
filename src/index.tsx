@@ -153,7 +153,7 @@ const OtpInputs = forwardRef<OtpInputsRef, Props>(
         handleInputTextChange(text, index);
       }
       if (Platform.OS === 'ios' && index === 0 && text.length > 1) {
-        inputs.current[index].current.setNativeProps({
+        inputs?.current[index]?.current?.setNativeProps({
           value: text[0],
           text: text[0],
         });
