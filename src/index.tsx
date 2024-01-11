@@ -267,10 +267,7 @@ const OtpInputs = forwardRef<OtpInputsRef, Props>(
             inputValue={inputValue}
             key={inputIndex}
             keyboardType={keyboardType}
-            maxLength={Platform.select({
-              android: 1,
-              ios: index === 0 ? numberOfInputs : 1,
-            })}
+            maxLength={index === 0 ? numberOfInputs : 1}
             numberOfInputs={numberOfInputs}
             placeholder={placeholder}
             ref={inputs.current[inputIndex]}
